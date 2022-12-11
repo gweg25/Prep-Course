@@ -16,8 +16,8 @@ function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
-  if (edad > 18) {
-    console.log('Allowed')
+  if (edad >= 18) {
+    return 'Allowed'
   } else {
       return 'Not allowed'
   }
@@ -64,19 +64,15 @@ function colors(color) {
   //Usar el statement Switch.
   switch (color) {
     case 'blue':
-      console.log('This is blue');
-      break;
+      return 'This is blue';
     case 'red':
-      console.log('This is red');
-      break;
+      return 'This is red';
     case 'green':
-      console.log('This is green');
-      break;
+      return 'This is green';
     case 'orange':
-      console.log('This is orange');
-      break;
+      return 'This is orange';
     default:
-      console.log('Color not found');
+      return 'Color not found';
   }
 }
 
@@ -85,9 +81,9 @@ function esDiezOCinco(numero) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if (numero === 10 || numero === 5) {
-    return 'true';
+    return true
   } else 
-    return 'false';
+    return false
 }
 
 function estaEnRango(numero) {
@@ -95,9 +91,9 @@ function estaEnRango(numero) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if (numero < 50 && numero > 20) {
-    return 'true';
+    return true
   } else 
-    return 'false';
+    return false
 }
 
 function esEntero(numero) {
@@ -110,9 +106,9 @@ function esEntero(numero) {
   // Tu código:
   if (numero % 1 === 0) {
     Math.floor(numero);
-    return 'true';
+    return true
   } else
-    return 'false';
+    return false
 }
 
 function fizzBuzz(numero) {
@@ -143,7 +139,7 @@ function operadoresLogicos(num1, num2, num3) {
   if (num3 > num1 && num3 > num2) {
     num3++;
     return num3
-  } else return 'false'
+  } else return false
 }
 
   function esPrimo(numero) {
@@ -197,7 +193,14 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-}
+  var numb = numero;
+  var cont = 0; 
+  do {
+    cont = cont + 1;
+    numb = numb + 5;
+  } while (cont < 8);
+    return numb;
+} 
 
 
 // No modificar nada debajo de esta línea
